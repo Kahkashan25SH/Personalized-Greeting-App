@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <!-- <img src="./images/pic.jfif" alt="Hi"> -->
+    <h1>Welcome to the Greeting App!</h1>
+    <img src="./images/pic.jfif" alt="Hi">
+    <button onclick="getGreeting()">Submit</button>
+    <p id="display-greet"></p>
+
+<script>
+    function getGreeting(){
+        let name = prompt("Enter your name");
+        let age = parseInt(prompt("Enter your age"));
+
+        if(age >= 30){
+            document.getElementById("display-greet").innerText = `Hello ${name}, congrasulation you are eligible for the identity card.`;
+        }
+        else if (age > 10 && age < 30){
+            document.getElementById("display-greet").innerText = ` Sorry ${name}, your age is less than ${age} years, your ID card cannot be generated.`;
+        }
+        else{
+            document.getElementById("display-greet").innerText = `Opsss! invalid your details.`;
+        }
+    }
+</script>
+
